@@ -16,20 +16,40 @@ Request:
 - `Idempotency-Key`
 - `Content-Type: application/json`
 
-Body schema:
-- `debtorAccountId` (string)
-- `creditorAccountId` (string)
-- `amount` (integer)
-- `currency` (string)
-- `paymentMethod` (string)
-- `remittanceInformation` (string)
+Body schema (Open Banking Payment Initiation mapping):
+- `instructionIdentification` (string)
+- `endToEndIdentification` (string)
+- `instructedAmount` (object)
+  - `amount` (string)
+  - `currency` (string)
+- `debtorAccount` (object)
+  - `schemeName` (string)
+  - `identification` (string)
+  - `name` (string)
+  - `secondaryIdentification` (string, optional)
+- `creditorAccount` (object)
+  - `schemeName` (string)
+  - `identification` (string)
+  - `name` (string)
+  - `secondaryIdentification` (string, optional)
+- `remittanceInformation` (object)
+  - `unstructured` (string)
+  - `reference` (string, optional)
 - `consentId` (string)
+- `beneficiaryId` (string, optional)  # optional stored recipient reference resolved by beneficiary-service
+- `supplementaryData` (object, optional)
 
 Response (201):
 - `paymentId` (string)
 - `status` (string)
-- `createdAt` (date-time)
+- `creationDateTime` (date-time)
+- `statusUpdateDateTime` (date-time)
 - `links` (object)
+
+#### Open Banking field mapping
+- `amount` / `currency` corresponds to `instructedAmount`
+- `debtorAccountId` and `creditorAccountId` are internal identifiers derived from `debtorAccount.identification` and `creditorAccount.identification`
+- `beneficiaryId` provides an alternate stored recipient reference resolved through `beneficiary-service`
 
 ### POST /v1/payments/bulk
 

@@ -66,7 +66,7 @@ infrastructure/
 ## Service Decomposition
 
 - `api-gateway`: ingress gateway for mTLS, OAuth2/OIDC token validation, route enforcement, rate limiting, and request signing verification.
-- `payment-api`: external REST interface for payment initiation, bulk payment submission, payment status queries, and account validation calls.
+- `payment-api`: external REST interface for payment initiation, bulk payment submission, payment status queries, and account validation calls. It also resolves stored beneficiary references by calling `beneficiary-service` during payment initiation.
 - `payment-processor`: Kafka-driven service responsible for payment lifecycle transitions, fraud/AML/core banking orchestration, and status event production.
 - `beneficiary-service`: CRUD and validation for payment beneficiaries with Open Banking-aligned schema mapping.
 - `account-validation-service`: synchronous account verification service with caching and core banking integration.
@@ -77,7 +77,7 @@ infrastructure/
 - All external APIs use JSON and are versioned under `/v1/`.
 - `api-gateway` enforces security, idempotency headers, request/response signing, and metrics capture.
 - Internal APIs use OAuth2 client credentials and mTLS.
-- `payment-api` implements request validation, consent checks, idempotency record creation, and transactional persistence.
+- `payment-api` implements request validation, consent checks, idempotency record creation, and transactional persistence. It also calls `beneficiary-service` to resolve `beneficiaryId` references and enrich creditor account details for payment initiation.
 - `payment-processor` handles workflow state changes asynchronously, preserving eventual event ordering per payment.
 
 ### Primary External Endpoints

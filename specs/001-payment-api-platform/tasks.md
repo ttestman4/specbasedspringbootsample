@@ -134,7 +134,7 @@
 - [ ] T056 Create PaymentInitiationService in `services/payment-api/src/main/java/com/payments/service/PaymentInitiationService.java` with methods: initiatePayment, initiateBulkPayments
 - [ ] T057 [P] Implement idempotency check in PaymentInitiationService: `checkIdempotency(String idempotencyKey)` returning cached response or null
 - [ ] T058 Implement MongoDB transaction wrapper in PaymentInitiationService for atomic payment + idempotency + outbox insert
-- [ ] T059 Implement payment state validation in PaymentInitiationService (status progression, required fields)
+- [ ] T059 Implement payment state validation and beneficiary resolution in PaymentInitiationService (status progression, required fields, beneficiary-service lookup)
 - [ ] T060 Create BulkPaymentProcessor in `services/payment-api/src/main/java/com/payments/service/BulkPaymentProcessor.java` to normalize and persist multiple payments
 
 ### 3C: Payment Initiation API Endpoints
