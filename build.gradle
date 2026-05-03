@@ -34,5 +34,5 @@ subprojects {
 
 // Test aggregation
 task testAll(type: Test) {
-    dependsOn subprojects.test
+    dependsOn subprojects.collect { project -> project.tasks.findByName('test') }.findAll { it != null }
 }

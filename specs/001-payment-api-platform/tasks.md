@@ -44,11 +44,11 @@
 
 ### 2A: Shared Libraries & Common Components
 
-- [ ] T009 Create `shared/` module with common domain exceptions, DTOs, and response wrappers in `shared/src/main/java/com/payments/shared/`
-- [ ] T010 [P] Implement base request/response models for Payment, Beneficiary, Account in `shared/src/main/java/com/payments/shared/model/`
-- [ ] T011 [P] Create OpenAPI schema validators in `shared/src/main/java/com/payments/shared/validation/`
-- [ ] T012 [P] Implement idempotency response cache interface in `shared/src/main/java/com/payments/shared/idempotency/`
-- [ ] T013 Implement correlation ID propagation utility in `shared/src/main/java/com/payments/shared/context/`
+- [X] T009 Create `shared/` module with common domain exceptions, DTOs, and response wrappers in `shared/src/main/java/com/payments/shared/`
+- [X] T010 [P] Implement base request/response models for Payment, Beneficiary, Account in `shared/src/main/java/com/payments/shared/model/`
+- [X] T011 [P] Create OpenAPI schema validators in `shared/src/main/java/com/payments/shared/validation/`
+- [X] T012 [P] Implement idempotency response cache interface in `shared/src/main/java/com/payments/shared/idempotency/`
+- [X] T013 Implement correlation ID propagation utility in `shared/src/main/java/com/payments/shared/context/`
 
 ### 2B: MongoDB Configuration & Persistence
 

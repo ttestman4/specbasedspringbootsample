@@ -14,5 +14,5 @@ repositories {
 }
 
 dependencies {
-    // Common dependencies can be added here
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
