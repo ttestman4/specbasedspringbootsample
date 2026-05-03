@@ -1,0 +1,9 @@
+rootProject.name = 'payment-api-platform'
+
+include 'services:api-gateway'
+include 'services:payment-api'
+include 'services:payment-processor'
+include 'services:beneficiary-service'
+include 'services:account-validation-service'
+include 'services:notification-service'
+include 'shared'

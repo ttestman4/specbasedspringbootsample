@@ -21,14 +21,14 @@
 **Estimated Duration**: 2-3 hours  
 **Checkpoint**: Gradle build runs, all dependencies resolved, project structure validated
 
-- [ ] T001 Create Gradle multi-project root with settings.gradle in repository root
-- [ ] T002 [P] Create `services/` directory structure: `api-gateway/`, `payment-api/`, `payment-processor/`, `beneficiary-service/`, `account-validation-service/`, `notification-service/`
-- [ ] T003 [P] Create `infrastructure/` directories: `kubernetes/base/`, `kubernetes/overlays/`, `kafka/`, `mongodb/`, `certs/`
-- [ ] T004 [P] Create shared `build-common.gradle` with Spring Boot 3.x, Java 17, and dependency management
-- [ ] T005 Create root `build.gradle` with multi-project task definitions and test aggregation
-- [ ] T006 [P] Add Gradle dependency versions in `gradle/libs.versions.toml` for Spring Boot, Spring Cloud, Kafka, MongoDB, Resilience4j, Micrometer, OpenTelemetry
-- [ ] T007 Configure `.gitignore` and `.dockerignore` for Java/Gradle/Docker artifacts
-- [ ] T008 [P] Create `Dockerfile.base` template for Spring Boot containerization across services
+- [X] T001 Create Gradle multi-project root with settings.gradle in repository root
+- [X] T002 [P] Create `services/` directory structure: `api-gateway/`, `payment-api/`, `payment-processor/`, `beneficiary-service/`, `account-validation-service/`, `notification-service/`
+- [X] T003 [P] Create `infrastructure/` directories: `kubernetes/base/`, `kubernetes/overlays/`, `kafka/`, `mongodb/`, `certs/`
+- [X] T004 [P] Create shared `build-common.gradle` with Spring Boot 3.x, Java 17, and dependency management
+- [X] T005 Create root `build.gradle` with multi-project task definitions and test aggregation
+- [X] T006 [P] Add Gradle dependency versions in `gradle/libs.versions.toml` for Spring Boot, Spring Cloud, Kafka, MongoDB, Resilience4j, Micrometer, OpenTelemetry
+- [X] T007 Configure `.gitignore` and `.dockerignore` for Java/Gradle/Docker artifacts
+- [X] T008 [P] Create `Dockerfile.base` template for Spring Boot containerization across services
 
 **Dependencies**: None  
 **Parallel Opportunities**: T002-T008 (all directory and configuration tasks)

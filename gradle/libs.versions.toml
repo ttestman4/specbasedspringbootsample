@@ -1,0 +1,27 @@
+[versions]
+springBoot = "3.2.0"
+springCloud = "2023.0.0"
+springKafka = "3.1.0"
+springDataMongodb = "4.2.0"
+resilience4j = "2.2.0"
+micrometer = "1.12.0"
+opentelemetry = "1.32.0"
+junit = "5.10.0"
+testcontainers = "1.19.0"
+avro = "1.11.1"
+apicurio = "2.4.0"
+
+[libraries]
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springBoot" }
+spring-boot-starter-data-mongodb = { module = "org.springframework.boot:spring-boot-starter-data-mongodb", version.ref = "springDataMongodb" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation", version.ref = "springBoot" }
+spring-kafka = { module = "org.springframework.kafka:spring-kafka", version.ref = "springKafka" }
+resilience4j-spring-boot3 = { module = "io.github.resilience4j:resilience4j-spring-boot3", version.ref = "resilience4j" }
+micrometer-registry-prometheus = { module = "io.micrometer:micrometer-registry-prometheus", version.ref = "micrometer" }
+opentelemetry-api = { module = "io.opentelemetry:opentelemetry-api", version.ref = "opentelemetry" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+testcontainers-junit-jupiter = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }
+testcontainers-mongodb = { module = "org.testcontainers:mongodb", version.ref = "testcontainers" }
+testcontainers-kafka = { module = "org.testcontainers:kafka", version.ref = "testcontainers" }
+avro = { module = "org.apache.avro:avro", version.ref = "avro" }
+apicurio-registry-serdes = { module = "io.apicurio:apicurio-registry-serdes-avro-serde", version.ref = "apicurio" }

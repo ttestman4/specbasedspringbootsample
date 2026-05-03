@@ -1,0 +1,42 @@
+# Java/Gradle
+.gradle/
+build/
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.staging
+
+# IDEs
+.vscode/
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Coverage reports
+coverage/
+*.exec
+
+# Wrapper
+gradle/wrapper/gradle-wrapper.jar
